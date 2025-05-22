@@ -7,7 +7,6 @@ import com.nbarra.luizlist.entities.dto.GameMinDTO;
 import com.nbarra.luizlist.repositeries.GameReposetory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,10 +17,10 @@ public class GameService {
     @Autowired
     private GameReposetory gameReposetory;
 
-    @Transactional(readOnly = true)
     public GameAllDTO findById(Long id) {
         Game result = gameReposetory.findById(id).get();
-        return new GameAllDTO(result);
+        GameAllDTO gameAllDTO = new GameAllDTO(result);
+        return gameAllDTO;
     }
 
     public List<GameMinDTO> findAll() {
