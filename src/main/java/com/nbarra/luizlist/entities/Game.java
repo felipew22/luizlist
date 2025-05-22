@@ -19,7 +19,11 @@ public class Game {
     private String platforms;
     private String score;
     private String imgUrl;
+
+    @Column (columnDefinition = "TEXT")
     private String shortDescription;
+
+    @Column (columnDefinition = "TEXT")
     private String LongDescription;
 
     public Game(){
