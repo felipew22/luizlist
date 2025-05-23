@@ -3,7 +3,6 @@ package com.nbarra.luizlist.entities;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import org.hibernate.annotations.ManyToAny;
 
 import java.util.Objects;
 
